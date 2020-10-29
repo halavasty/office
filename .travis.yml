@@ -1,15 +1,17 @@
 language: node_js
 node_js:
- - "node"
-
-cache: npm
-
-script: npm run build
-
+- '10.17'
+cache:
+  directories:
+  - node_modules
+install:
+- yarn
+script:
+- yarn build
 deploy:
- provider: pages
- skip_cleanup: true
- github_token: $GITHUB_TOKEN
- local_dir: dist
- on:
-   branch: main
+  provider: heroku
+  local-dir: dist
+  app: office-3d
+  api_key:
+    secure: uZ5clMmesgV46/HW/o1C1WP/7LXiub+UeJlrmfEXVd1S5L/7ZUhi3NEdfLC4dnF50gPkRVjH2F97h210NBjsgk93yzSmqTA5iD+TJJ7CT1w4BiG4QTH7saUAJlHxTg3kuhfpQgkOaSjGR6YeZRrgFxmlKvtsWZgrg0wLoHEmCYwSUSWEeXY/zQUAcjM8cPjWZW0gxHnS1ikPkMB1V2F2k0IPnPWu2OrAxt8R8ntfV4wLA5u1M2L48xBuz6uV1Ofv2j+hq0xpTWAAOZALKLYkchbCUy6sQVfS3zFewSF3lTz2h9Z7NmsizuNqsQcW8y8VB8wQRQq0uC+J6RbBweXdLbPuPQ+vdIF0YeVTCIlxft7C9Ka4cjyjOscYapvhLa1Duw/W5jzfbEUHSqigSMBkkmxEQM6udcG5HPYe2gBpm1Zlf2IJ0xk3A59KcuaZ2ib12meHON3AkLsSKWCQnsZrmig/sqEy3OxpAKkPYbqaH91bhAdft2d6smrEh4uYTFP9w3q0sHXSartlw1NXYXl7fkuJpMc+Knb+cxG3pnkL6WXtuNlx8ldKQUho0v4FfrMeLa/Y6ZJO8d0tw1OLMHA60uF/4x95PB1GI1+fUOhZ5gUt6xlgv3FmSFwnMDymOyXUQL1akYiwDFKRWld+KbmZ5uBSjg7BSmygZdte1TIvuTY=
+  on: main
