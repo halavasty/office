@@ -54,20 +54,50 @@ export default class Office extends Vue {
     'arha',
     'kita',
     'dmim',
+    'kanv',
+    'kata',
+    'kaan',
+    'duan',
+    'guva',
+    'taol',
   ];
 
   private desks = [
     {
-      "cid": 'arha',
+      "cid": 'kaan',
       'id': '1'
     },
     {
-      "cid": 'kita',
+      "cid": 'taol',
       'id': '2'
     },
     {
-      "cid": 'dmim',
+      "cid": 'arha',
       'id': '3'
+    },
+    {
+      "cid": 'dmim',
+      'id': '4'
+    },
+    {
+      "cid": 'kanv',
+      'id': '5'
+    },
+    {
+      "cid": 'kata',
+      'id': '6'
+    },
+    {
+      "cid": 'duan',
+      'id': '7'
+    },
+    {
+      "cid": 'guva',
+      'id': '8'
+    },
+    {
+      "cid": 'kita',
+      'id': '9'
     },
   ];
 
